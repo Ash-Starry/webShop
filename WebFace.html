@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>integrity正直商贸网站</title>
+<style type="text/css">
+	body{margin:0;padding: 0;}
+	.one{width:100%;height:30px;
+		background-color:#D3D3D3;
+		margin:0 auto;
+		padding:0px;
+		font-family:"宋体";}
+		div th:link{color:black;}
+	    div th:visited{color:grey;}
+	    div th:hover{color:blue;}
+	    div th:active{color:red;}
+	.two{width:1000px;
+		height:100px;
+		background-color:white;
+		margin:0 auto;
+		font-size: 30px;}
+	.box1{width:100px;
+		height:100px;
+		background-color:white;
+		margin:0 auto;
+		float: left;}/*上下为0，左右为自动*/
+	.box2{width:700px;
+		height:100px;
+		background-color:white;
+		margin:0 auto;
+		float: right;
+		line-height: 80px;}
+	.box3{width:470px;/*为了确定搜索框的位置加了一个div*/
+		height:55px;
+	   background-color: white;
+	   margin:0px 0px 45px 240px;}
+	input[type="text"]
+	   {background: white;
+		width:300px;
+		height:50px;
+		border:1px black solid;
+		padding:0 25px;
+		border-radius: 25px 0 0 25px;}
+	input[type="submit"]
+	    {background: #87C4ED;
+		left:-5px;
+		width:100px;
+		height:52px;
+		border:1.5px #87C4ED solid;
+		border-radius: 0 25px 25px 0;
+		outline: none;
+		cursor: pointer;}/*cursor属性，把鼠标的指针弄成小手*/
+	input[type="submit"]:link{color:black;}
+	input[type="submit"]:visited{color:grey;}
+	input[type="submit"]:hover{color:blue;}
+	input[type="submit"]:active{color:red;}
+	.three{color:blue;}	
+	.four{width:1000px;
+		height:300px;
+		background-color:white;
+		margin:0 auto;
+		font-size:16px;}
+	.div1{width:200px;
+		height:300px;
+		margin:0 auto;
+		float:left;}
+	#H1{width:200px;
+	   font-family:宋体;}
+	#H1 ul{list-style-type: none;/*不显示项目符号*/
+	    margin:0px;
+	    padding:0px;
+	    text-decoration: none;}/*不显示项目符号*/
+	#H1 li a{display: block;
+	    padding:12.5px 5px 12px 0.5em;
+	    text-decoration: none;
+		border-left: 9px solid #87C4ED;/*左边的粗蓝线*/}
+	#H1 li a:link,#H1 li a:visited{
+		background-color: #f2f2f2;
+        color:black;	}
+    #H1 li a:hover{background-color: #87C4ED;/*鼠标背景经过是的颜色*/
+    	color:white;}/*鼠标经过时文字的颜色*/	
+	.div2{width:530px;/*这里是轮播图*/
+		height:300px;
+		background-color:#D9D9D9;
+		margin:0 auto;
+		font-size: 30px;
+		float:left;}
+    .All1{
+	 	width:500px;
+	 	height:280px;
+	 	overflow: hidden;}
+	.All1{position: absolute;
+	 	top:44.5%;
+	 	left:47.8%;
+	 	transform: translate(-50%,-50%);}/*定位到网页中间*/
+	.All3{position: absolute;
+	 	bottom:5px;
+	 	left:50%;
+	 	transform: translateX(-50%);
+	    display: flex;}
+	.G2{width:30px;
+	 		height:5px;
+	 		border:1px solid #fff;
+	 		margin:6px;
+	 		cursor:pointer;
+	 		transition: 0.4s;}/*把鼠标的指针整成小手*/
+	.G2:hover{background: #fff;}/*转换条中间的白色*/
+	   input[name="r"]{
+	 	position: absolute;
+	 	visibility: hidden;}
+	.All2{width:500%;
+			height:100%;
+			display: flex;}
+	.G1{transition: 0.6s;}/*G1 中的照片平滑过度的时间为0.6s*/
+	.G1 img{width:500px;
+	 	height:280px;}
+       #r1:checked ~ .g1{ margin-left: 0; }
+	   #r2:checked ~ .g1{ margin-left: -20%;}
+	   #r3:checked ~ .g1{ margin-left:-40%;}
+	   #r4:checked ~ .g1{ margin-left:-60%;}
+	   #r5:checked ~ .g1{ margin-left:-80%;}/*轮播图结束*/
+	.divZ{width:270px;
+		height:300px;
+		background-color:#f2f2f2;
+		margin:0 auto;
+		font-size:16px;
+		float:left;}
+	.div3{width:250px;
+		height:120px;
+		background-color:white;
+		margin-bottom: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 20px;
+		float:top;}
+	.div4{width:250px;
+		height:120px;
+		background-color:white;
+		margin-bottom: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 20px;
+		float:bottom;}
+	.p1{font-size:18px;
+		color:#8F8F8F;}
+	.five{width:1000px; 
+		height:40px;
+		border-top: 2px solid blue;
+		background-color:#f2f2f2;
+		margin:10px auto;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 40px;}
+	.six{width:1000px; 
+		height:500px;
+		background-color:white;
+	    margin:auto;}
+	.S2{width:250px;
+	   	height:500px;
+	  	background-color: white;
+	  	float:right;
+	  	margin-left: 10px;}
+	.S1{width:730px;
+	  	height:250px;
+	  	background-color: white;
+	  	float:left;
+	  	border:1.5px solid black;}  
+	.S3{width:730px;
+	  	height:250px;
+	  	background-color: white;
+	  	float:left;
+	  	border:1.5px solid black;}  
+	.A1{color:red;}
+	.A2{vertical-align: super;}
+	.A3{font-weight: bold;}
+	.B1{color:#7E8282;
+	  	font-weight: bold;}
+	.seven{width:1000px;
+		height:500px;
+		margin:0 auto;
+		background-color: white;} 
+	.C1{width:730px;
+	  	height:500px;
+	  	background-color: white;
+	  	margin-right: 10px;
+	  	float:left;
+	  	border:1.5px solid black;}
+	.C2{width:250px;
+	   	height:500px;
+	  	float:right;
+	  	background-color:white;
+	  	border:1.5px solid black;}
+	  .D1{color:red;
+        text-decoration: line-through;}
+      .D2{color:red;}
+	.nine{width:1000px; 
+		height:500px;
+		background-color:white;
+	    margin:auto;}
+	 .E1{border:1.5px solid black;}
+	.ten{width:1000px;
+		height:90px;
+		background-color:white;
+		margin:20px auto 10px auto;
+		text-align: center;
+		border-bottom:2px solid blue;
+		border-top: 1px solid grey;}
+	.F1{color:grey;
+		font-size: 16px;}
+	.eleven{width:1000px;
+		height:90px;
+		margin:10px auto;
+		background-color:white;
+	    font-size: 16px;}
+	.F2{color:#f2f2f2;}
+	.F3{color: blue;
+		text-decoration-line: underline;}
+	.F4{color:red;}
+</style>
+
+</head>
+<body>
+<div class="one">
+<form>
+	<table border="0" align="center">
+		<tr>
+			<td align="left" width="300px">您好，欢迎来到正直网络商贸!</td>
+			<th align="right" width="100px">首页</th>
+            <th align="right" width="100px">我的收藏</th>
+            <th align="right" width="100px">我的钱包</th>
+            <th align="right" width="100px">账号管理</th>
+		    <th align="right" width="100px">客服中心</th>
+		</tr>
+	</table>
+</form>
+</div>
+<div class="two">
+	<div class="box1">
+		<img src="logo.jpg" width="100px" height="100px"/>
+	</div>
+	<div class="box2">
+		<div class="box3">
+		<input type="text" name="" placeholder="搜索一下，你就知道!">
+		<input type="submit" name="" value="确定">
+		</div><!--来表示搜索框-->
+	</div>
+</div>
+<div class="three">
+<form>
+		<table border="0" align="center" width="1000px">
+			<tr>
+				<td align="left">首页&nbsp&nbsp&nbsp&nbsp&nbsp
+					&nbsp&nbsp 食品 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					&nbsp百货 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  美妆&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp生鲜
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp内衣&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp洗护&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp女装&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp饰品&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp母婴&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp······
+			</tr>
+		</table>
+	</form>
+</div>
+<hr width="1000px" size="2px" color="blue" align="center" >
+<div class="four">
+	<div class="div1">
+		<form id="form1" runat="server">
+		<div id="H1">
+			<ul>
+				<li><a href="#">正直菜市场</a></li>
+				<li><a href="#">特价服装甩卖</a></li>
+				<li><a href="#">零食太好吃了吧</a></li>
+				<li><a href="#">难怪我这么胖</a></li>
+				<li><a href="#">儿童用品</a></li>
+				<li><a href="#">不知名用品</a></li>
+				<li><a href="#">都是垃圾用品</a></li>
+			</ul>
+		</div>
+	</form>
+	</div>
+<div class="div2"><!--轮播图div2-->
+		<div class="All1">
+		<div class="All2">
+			<input type="radio" name="r" id="r1" checked>
+			<input type="radio" name="r" id="r2">
+			<input type="radio" name="r" id="r3">
+			<input type="radio" name="r" id="r4">
+			<input type="radio" name="r" id="r5">
+				<div class="G1 g1">
+			     <img src="LB1.png" alt="无图无真相" width="500px" height="280px">
+				</div>
+				<div class="G1">
+			     <img src="LB2.png" alt="无图无真相" width="500px" height="280px">
+				</div>
+				<div class="G1">
+			     <img src="LB3.png" alt="无图无真相" width="500px" height="280px">
+				</div>
+				<div class="G1">
+			     <img src="LB4.png" alt="无图无真相" width="500px" height="280px">
+				</div>
+				<div class="G1">
+			     <img src="LB5.png" alt="无图无真相" width="500px" height="280px">
+				</div>
+	    </div>
+				 <div class="All3">
+			    	<label for="r1" class="G2"></label>
+			    	<label for="r2" class="G2"></label>
+			    	<label for="r3" class="G2"></label>
+			    	<label for="r4" class="G2"></label>
+			    	<label for="r5" class="G2"></label>
+			    </div>	   
+        </div>
+</div><!--轮播图div2-->
+	<div class="divZ">
+		<div class="div3">
+			<p font-size="16px">&nbsp&nbsp&nbsp&nbsp<b>正直商贸城至尊奢华版</b></p>
+			<table border="0px">
+				<tr>
+					<td width="80px" height="80px"><img src="logo.jpg" width="80px" height="80px"></td>
+					<td>来来来，全场9.9，买不了吃亏，买不了上当!&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp了解详情</a></td>
+				</tr>
+			</table>
+		</div>
+		<div class="div4">
+		  <p align="center" class="p1"><b>遇到问题了吧，联系客服？</b></p>
+		  <p align="center">客服电话：8008208820</p>
+		  <p align="center"><input type="button" name="button" value="咨询客服"/></p>
+		</div>
+	</div>
+</div>
+<div class="five">&nbsp&nbsp&nbsp&nbsp我爱JK制服</div><!--中间灰色过度-->
+<div class="six">
+	<div class="S2">
+		<table border="1px" width="250px" height="500px" align="center" cellspacing="0px" cellpadding="0px">
+			<tr width="250px" height="30px">
+				<td>&nbsp&nbsp&nbsp&nbsp<span class="B1">服装资讯</span></td>
+			</tr>
+			<tr width="250px" height="470px">
+				<td>
+					<ul>
+						<li>啊，这里的衣服超级好看</li>
+						<li>啊，这里的衣服超级漂亮</li>
+						<li>啊，这里的衣服超级美丽</li>
+						<li>啊，这里的衣服超级便宜</li>
+						<li>啊，这里的衣服超级实惠</li>
+						<li>啊，这里的衣服超级好看</li>
+						<li>啊，这里的衣服超级漂亮</li>
+						<li>啊，这里的衣服超级美丽</li>
+						<li>啊，这里的衣服超级便宜</li>
+						<li>啊，这里的衣服超级实惠</li>
+						<li>啊，这里的衣服超级好看</li>
+						<li>啊，这里的衣服超级漂亮</li>
+						<li>啊，这里的衣服超级美丽</li>
+						<li>啊，这里的衣服超级便宜</li>
+						<li>啊，这里的衣服超级实惠</li>
+						<li>啊，这里的衣服超级好看</li>
+						<li>啊，这里的衣服超级好看</li>
+						<li>啊，这里的衣服超级漂亮</li>
+						<li>啊，这里的衣服超级好看</li>
+						<li>啊，这里的衣服超级漂亮</li>
+						<li>啊，这里的衣服超级好看</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="S1">
+		<table border="0px" width="730px" height="250px">
+			<tr>
+				<td width="182.5px" height="250px" align="center"><img src="JK1.jpg" width="150px" height="180px"></td>
+				<td width="182.5px" height="250px" align="center">
+					<p>JK制服&nbsp&nbsp&nbsp&nbsp超级好看</p>
+					<p>适合瘦子</p>
+					<p class="A3">体重超过140不建议哦</p>
+					<p class="A3">售价：<span class="A1">456.30</span><span class="A2">TM</span></p>
+					<p class="A3">限量：<span class="A1">99</span>&nbsp&nbsp已出售：<span class="A1">21</span></p>
+				</td>
+				<td width="182.5px" height="250px" align="center"><img src="JK2.jpg" width="150px" height="180px"></td>
+				<td width="182.5px" height="250px" align="center">
+					<p>JK制服&nbsp&nbsp&nbsp&nbsp超级好看</p>
+					<p>适合瘦子</p>
+					<p class="A3">体重超过140不建议哦</p>
+					<p class="A3">售价：<span class="A1">168.75</span><span class="A2">TM</span></p>
+					<p class="A3">限量：<span class="A1">99</span>&nbsp&nbsp已出售：<span class="A1">59</span></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="S3">
+		<table border="0px" width="730px" height="250px">
+			<tr>
+				<td width="182.5px" height="250px" align="center"><img src="JK3.jpg" width="150px" height="180px"></td>
+				<td width="182.5px" height="250px" align="center">
+					<p>JK制服&nbsp&nbsp&nbsp&nbsp超级好看</p>
+					<p>适合瘦子</p>
+					<p class="A3">体重超过140不建议哦</p>
+					<p class="A3">售价：<span class="A1">416.00</span><span class="A2">TM</span></p>
+					<p class="A3">限量：<span class="A1">99</span>&nbsp&nbsp已出售：<span class="A1">12</span></p>
+				</td>
+				<td width="182.5px" height="250px" align="center"><img src="JK4.jpg" width="150px" height="180px"></td>
+				<td width="182.5px" height="250px" align="center">
+					<p>JK制服&nbsp&nbsp&nbsp&nbsp超级好看</p>
+					<p>适合瘦子</p>
+					<p class="A3">体重超过140不建议哦</p>
+					<p class="A3">售价：<span class="A1">238.50</span><span class="A2">TM</span></p>
+					<p class="A3">限量：<span class="A1">99</span>&nbsp&nbsp已出售：<span class="A1">48</span></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div><!--class="six"-->
+<div class="five">&nbsp&nbsp&nbsp&nbsp我超喜欢Lolita的</div><!--中间灰色过度-->
+<div class="seven">
+	<div class="C1">
+		<table width="730px" height="490px" border="0px">
+		 <tr align="center">
+		 	<td width="182.5px" height="30px" colspan="4">
+		 		<img src="L6.png" width="720px" height="25px">
+		 	</td>
+		 </tr>
+		 <tr align="center">
+		 	<td width="182.5px" height="225px"><img src="L1.jpg" width="150px" height="225px"></td>
+		 	<td width="182.5px" height="225px"><img src="L2.jpg" width="150px" height="225px"></td>
+		 	<td width="182.5px" height="225px"><img src="L3.jpg" width="150px" height="225px"></td>
+		 	<td width="182.5px" height="225px"><img src="L4.jpg" width="150px" height="225px"></td>
+		 </tr>	
+		 <tr align="center">
+		 	<td width="182.5px" height="220px">
+		 		<p>Lolita便宜卖了啊,瞧一瞧，看一看,买不了吃亏，买不了上当</p>
+		 		<p>适合收入过万的贵妇</p>
+		 		<p>原价：<span class="D1">¥5999</span></p>
+		 		<p>促销价：<span class="D2">¥3999</span></p>
+		 	</td>
+		 	<td width="182.5px" height="220px">
+		 		<p>Lolita便宜卖了啊,瞧一瞧，看一看,买不了吃亏，买不了上当</p>
+		 		<p>适合收入过万的贵妇</p>
+		 		<p>原价：<span class="D1">¥5999</span></p>
+		 		<p>促销价：<span class="D2">¥3999</span></p>
+		 	</td>
+		 	<td width="182.5px" height="220px">
+		 		<p>Lolita便宜卖了啊,瞧一瞧，看一看,买不了吃亏，买不了上当</p>
+		 		<p>适合收入过万的贵妇</p>
+		 		<p>原价：<span class="D1">¥5999</span></p>
+		 		<p>促销价：<span class="D2">¥3999</span></p>
+		 	</td>
+		 	<td width="182.5px" height="220px">
+		 		<p>Lolita便宜卖了啊,瞧一瞧，看一看,买不了吃亏，买不了上当</p>
+		 		<p>适合收入过万的贵妇</p>
+		 		<p>原价：<span class="D1">¥5999</span></p>
+		 		<p>促销价：<span class="D2">¥3999</span></p>
+		 	</td>
+		 </tr>	
+		</table>
+    </div>
+	<div class="C2">
+		<table border="0px" width="250px" height="500px">
+			<tr align="center">
+				<td>
+			<img src="L5.jpg" width="230px" height="480px">
+				</td>
+		   </tr>
+		</table>
+	</div>
+</div>
+<div class="five">&nbsp&nbsp&nbsp&nbsp汉服也是我的最爱</div><!--中间灰色过度-->
+<div class="nine">
+	<div class="S2">
+		<table width="250px" height="30px" border="1px" cellpadding="0px" cellspacing="0px">
+			<tr>
+				<td colspan="2">&nbsp&nbsp&nbsp&nbsp<span class="B1">买不起的汉服</span></td>
+			</tr>
+		</table>
+		<table class="E1" border="0px" width="250px" height="463px">
+			<tr width="250px" height="170px">
+				<td width="150pxpx" height="170px" align="center">
+					<img src="T1.jpg" width="150px" height="170px">
+				</td>
+				<td width="100px" height="170px" align="center">
+				Don't look, you don't have enough money buy it.	
+				</td>
+			</tr>
+			<tr width="250px" height="293px">
+				<td colspan="2">
+					<ul>
+						<li>啊，这里的衣服超级好看</li>
+						<li>啊，这里的衣服超级漂亮</li>
+						<li>啊，这里的衣服超级美丽</li>
+						<li>啊，这里的衣服超级便宜</li>
+						<li>啊，这里的衣服超级实惠</li>
+						<li>啊，这里的衣服超级美丽</li>
+						<li>啊，这里的衣服超级便宜</li>
+						<li>啊，这里的衣服超级实惠</li>
+						<li>啊，这里的衣服超级美丽</li>
+						<li>啊，这里的衣服超级便宜</li>
+						<li>啊，这里的衣服超级实惠</li>
+						<li>啊，这里的衣服超级美丽</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="S1">
+		<table border="0px" width="730px" height="250px">
+			<tr>
+				<td width="182.5px" height="250px" align="center"><img src="G1.jpg" width="150px" height="180px"></td>
+				<td width="182.5px" height="250px" align="center">
+					<p>唯美古风马面裙子</p>
+					<p>明华堂出品</p>
+					<p class="A3">家里没有矿谨慎购买</p>
+					<p class="A3">售价：<span class="A1">456.30</span><span class="A2">TM</span></p>
+					<p class="A3">限量：<span class="A1">99</span>&nbsp&nbsp已出售：<span class="A1">21</span></p>
+				</td>
+				<td width="182.5px" height="250px" align="center"><img src="G2.jpg" width="150px" height="180px"></td>
+				<td width="182.5px" height="250px" align="center">
+					<p>唯美古风马面裙子</p>
+					<p>明华堂出品</p>
+					<p class="A3">家里没有矿谨慎购买</p>
+					<p class="A3">售价：<span class="A1">168.75</span><span class="A2">TM</span></p>
+					<p class="A3">限量：<span class="A1">99</span>&nbsp&nbsp已出售：<span class="A1">59</span></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="S3">
+		<table border="0px" width="730px" height="250px">
+			<tr>
+				<td width="182.5px" height="250px" align="center"><img src="G3.jpg" width="150px" height="180px"></td>
+				<td width="182.5px" height="250px" align="center">
+					<p>唯美古风马面裙子</p>
+					<p>明华堂出品</p>
+					<p class="A3">家里没有矿谨慎购买</p>
+					<p class="A3">售价：<span class="A1">416.00</span><span class="A2">TM</span></p>
+					<p class="A3">限量：<span class="A1">99</span>&nbsp&nbsp已出售：<span class="A1">12</span></p>
+				</td>
+				<td width="182.5px" height="250px" align="center"><img src="G4.jpg" width="150px" height="180px"></td>
+				<td width="182.5px" height="250px" align="center">
+					<p>唯美古风马面裙子</p>
+					<p>明华堂出品</p>
+					<p class="A3">家里没有矿谨慎购买</p>
+					<p class="A3">售价：<span class="A1">238.50</span><span class="A2">TM</span></p>
+					<p class="A3">限量：<span class="A1">99</span>&nbsp&nbsp已出售：<span class="A1">48</span></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div><!--class="nine"-->
+<div class="ten">
+	<table width="1000px" height="80px" align="center" border="0px">
+		<tr width="1000px" height="10px"><td></td></tr>
+		<tr width="1000px" height="30px">
+			<td>
+	友情链接：
+	<span class="F1">加入我们&nbsp&nbsp&nbsp&nbsp加入我们&nbsp&nbsp&nbsp&nbsp加入我们&nbsp&nbsp&nbsp&nbsp加入我们&nbsp&nbsp&nbsp&nbsp加入我们&nbsp&nbsp&nbsp&nbsp加入我们&nbsp&nbsp&nbsp&nbsp加入我们&nbsp&nbsp&nbsp&nbsp加入我们&nbsp&nbsp&nbsp&nbsp加入我们&nbsp&nbsp&nbsp&nbsp加入我们</span>
+			</td>
+		</tr>
+		<tr width="1000px" height="30px">
+			<td>
+	<span class="F1">求求你了&nbsp&nbsp&nbsp&nbsp求求你了&nbsp&nbsp&nbsp&nbsp求求你了&nbsp&nbsp&nbsp&nbsp求求你了&nbsp&nbsp&nbsp&nbsp求求你了&nbsp&nbsp&nbsp&nbsp求求你了&nbsp&nbsp&nbsp&nbsp求求你了&nbsp&nbsp&nbsp&nbsp求求你了&nbsp&nbsp&nbsp&nbsp求求你了&nbsp&nbsp&nbsp&nbsp求求你了&nbsp&nbsp&nbsp&nbsp求求你了</span>	
+			</td>
+		</tr>
+		<tr width="1000px" height="10px"><td></td></tr>
+	</table>
+</div>
+<div class="eleven">
+	<table width="1000px" height="90px" border="0px">
+		<tr width="1000px" height="30px" align="center">
+			<td width="80px"></td>
+			<td>关于我们&nbsp&nbsp&nbsp&nbsp<span class="F2">|</span></td>
+			<td>关于我们&nbsp&nbsp&nbsp&nbsp<span class="F2">|</span></td>
+			<td>关于我们&nbsp&nbsp&nbsp&nbsp<span class="F2">|</span></td>
+			<td>关于我们&nbsp&nbsp&nbsp&nbsp<span class="F2">|</span></td>
+			<td>关于我们&nbsp&nbsp&nbsp&nbsp<span class="F2">|</span></td>
+			<td>关于我们&nbsp&nbsp&nbsp&nbsp<span class="F2">|</span></td>
+			<td>关于我们&nbsp&nbsp&nbsp&nbsp<span class="F2">|</span></td>
+			<td>关于我们</td>
+			<td width="80px"></td>
+		</tr>
+		<tr width="1000px" height="30px" align="center">
+			<td colspan="10">
+				中国商贸网&nbsp&nbsp版权所有&nbsp&nbsp2000-20012&nbsp&nbsp服务热线：<span class="F3">800-820-8820</span>&nbsp&nbsp请与我们联系:&nbsp&nbspClothesBeauty@183.com
+			</td>
+		</tr>
+		<tr width="1000px" height="30px" align="center">
+			<td colspan="10">
+				加入我们&nbsp&nbsp<span class="F4">年费1000W</span>&nbsp&nbsp超级&nbsp&nbsp<span class="F4">VVVVVIP</span>&nbsp&nbsp会员所有衣服全部&nbsp&nbsp<span class="F4">1折</span>&nbsp&nbsp
+			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
